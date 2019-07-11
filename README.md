@@ -1,16 +1,15 @@
 
-   
-                      **ELECTRONIC VOTING SYSTEM** 
-                                 **ON**
-                       **AZURE** **HYPDERLEDGER**
+   **ELECTRONIC VOTING SYSTEM** 
+   **ON**
+  **AZURE** **HYPDERLEDGER**
 
-     Team Name- Epsilon
-     Nayan Das
-     Vikash Kumar
-     Summet Kumar
+    Team Name- Epsilon
+    Nayan Das
+    Vikash Kumar
+    Summet Kumar
 
-     COMPUTER SCIENCE & ENGINEERING 
-     DEPARTMENT IIT KANPUR, KANPUR
+    COMPUTER SCIENCE & ENGINEERING 
+    DEPARTMENT IIT KANPUR, KANPUR
  
 #   
       
