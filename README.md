@@ -6,7 +6,7 @@
     Team Name- Epsilon
     Nayan Das
     Vikash Kumar
-    Summet Kumar
+    Sumit Kumar
 
     COMPUTER SCIENCE & ENGINEERING 
     DEPARTMENT IIT KANPUR, KANPUR
