@@ -1,4 +1,4 @@
-var token = "AgIS1WDsFgzIRgkqUBIQgdvyHtBkuk1L7ceOK5wssHfBdcJF9deATGj17lM1z7mj";
+var token = "IwfQT9NS7re56jNE9vzLrslzuFgsj7B4Q2547JE9iyb50T9gxlLCAIEB96FtB7fQ";
 function myFunction(s, hash) {
   console.log(s);
   $.ajax({
@@ -190,7 +190,7 @@ $(document).ready(function() {
     // alert("Hello  " + $("#cconstituency").val());
     $.ajax({
       url:
-        "https://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
+        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
       contentType: "application/json",
       type: "POST",
       headers: {
@@ -211,7 +211,7 @@ $(document).ready(function() {
       '"}]}}';
     //'"
     var s =
-      "https://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.Candidate?filter=" +
+      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.Candidate?filter=" +
       fil1;
 
     //  var uri = encodeURI(s);
@@ -267,7 +267,7 @@ $(document).ready(function() {
     // alert("Hello  " + $("#cconstituency").val());
     $.ajax({
       url:
-        "https://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/v001/setDefault",
+        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
       contentType: "application/json",
       type: "POST",
       headers: {
@@ -284,7 +284,7 @@ $(document).ready(function() {
       '{"where": {"voterCardId":"' + $("#registrationNo").val() + '"}}';
     //'"
     var s =
-      "https://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.VoterCard?filter=" +
+      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.VoterCard?filter=" +
       fil2;
 
     //  var uri = encodeURI(s);
