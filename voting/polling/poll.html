@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="">
+  <head>
+    <title>Voting</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../layout/scripts/poll.js"></script> 
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css"
+    />
+    <link
+      href="../layout/styles/layout.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+  </head>
+  <body id="top">
+     
+    <div class="wrapper row1">
+        <nav>
+      <header id="header" class="hoc clear">
+          
+        <section>
+          <div class="sectiontitle">
+            
+            <h1 id="logo">
+              <a href="index.html">Registration Officer Portal</a>
+            </h1>
+            
+          </div>
+        </section>
+      
+      </header>
+    </nav>
+    </div>
+  
+    <div>
+      <table class="centered">
+        <tr>
+            
+          <td>
+             
+        <select id="cstate">
+          <option value="">Select State</option>
+          <option value="UP">Uttar pradesh</option>
+          <option value="MP">Madhya Pradesh</option>
+        </select>
+      
+    </td>
+    <td>
+     
+        <select id="cconstituency">
+          <option value="Select Constituency">Select Constituency</option>
+          <option value="Kanpur">Kanpur</option>
+          <option value="Lucknow">Lucknow</option>
+        </select>
+     
+    </td>
+    <td style="text-align:center;">
+     
+        <button id="loadCandidate" style="height: 3em;" btn waves-effect waves-light col s12>
+          Load Candidate
+        </button>
+     
+    </td></tr></div>
+  </table>
+  <div id="pageintro" class="hoc clear">
+      Enter Voter ID: <input type="text" id="voterid" style="text-align:center;"><br>
+  </div>
+    
+      <div id="pageintro" class="hoc clear">
+        <article><table class="table bordered table-striped" id="candidateTable" style="align-content: center;"><thead><tr><th scope="col">Serial No</th><th scope="col">Candidate Name</th><th scope="col">Party Name</th><th scope="col">Choose </th></tr></thead><tbody id="loadCandidate"></tbody>
+        </article>
+         
+            <!-- </div> -->
+        </div>
+      <!-- Default unchecked -->
+
+    <!--<div class="wrapper row3">
+  <main class="hoc container clear"> 
+ <div class="sectiontitle">
+      <h6 class="heading">Donec tortor eget mauris sagittis</h6>
+      <p>Convallis morbi eget leo elit praesent at libero et arcu</p>
+    </div> -->
+  </body>
+</html>
