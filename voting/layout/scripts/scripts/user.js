@@ -1,21 +1,21 @@
-var token = "Hpy08g0Yqx7GHkr8pUgfHOUSCgkUj3y16OVywVMwtZavTdn1uMcblhH5KO1yHwOV";
+var token = "IwfQT9NS7re56jNE9vzLrslzuFgsj7B4Q2547JE9iyb50T9gxlLCAIEB96FtB7fQ";
 function myFunction(s, hash) {
   console.log(s);
-  $.ajax({
-    url:
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/r003/setDefault",
-    contentType: "application/json",
-    type: "POST",
-    headers: {
-      "X-Access-Token": token
-    },
-    success: function() {
-      console.log("success");
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      console.log(xhr.status + "  " + thrownError);
-    }
-  });
+  // $.ajax({
+  //   url:
+  //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
+  //   contentType: "application/json",
+  //   type: "POST",
+  //   headers: {
+  //     "X-Access-Token": token
+  //   },
+  //   success: function() {
+  //     console.log("success");
+  //   },
+  //   error: function(xhr, ajaxOptions, thrownError) {
+  //     console.log(xhr.status + "  " + thrownError);
+  //   }
+  // });
   $.ajax({
     url:
       "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.createVoterCard",
@@ -29,9 +29,11 @@ function myFunction(s, hash) {
     success: function(data) {
       console.log(data);
       alert("Your voterID Id is:" + hash);
+      //setTimeout(location.reload(),10000);
     },
     error: function(error) {
       console.log(error.responseText);
+      // setTimeout(location.reload(),10000);
     }
   });
 }
@@ -43,7 +45,7 @@ $(document).ready(function() {
   $("#userSubmit").click(function() {
     // $("form").submit(function() {
 
-    // alert("Hello " + $("#name").val());
+    alert("Hello " + $("#name").val());
     // r = $(this).serializeArray();
 
     jsonstr =
@@ -104,21 +106,21 @@ function getHash(str, algo = "SHA-256") {
 $(document).ready(function() {
   $("#userVoterList").click(function() {
     // alert("Hello  " + $("#cconstituency").val());
-    $.ajax({
-      url:
-        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/v001/setDefault",
-      contentType: "application/json",
-      type: "POST",
-      headers: {
-        "X-Access-Token": token
-      },
-      success: function() {
-        console.log("success");
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status + "  " + thrownError);
-      }
-    });
+    // $.ajax({
+    //   url:
+    //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/v001/setDefault",
+    //   contentType: "application/json",
+    //   type: "POST",
+    //   headers: {
+    //     "X-Access-Token": token
+    //   },
+    //   success: function() {
+    //     console.log("success");
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError) {
+    //     console.log(xhr.status + "  " + thrownError);
+    //   }
+    // });
     var fil =
       '{"where":{"and":[{"constituency":"' +
       $("#constituency").val() +
@@ -262,21 +264,21 @@ $(document).ready(function() {
 $(document).ready(function() {
   $("#registrationStatus").click(function() {
     // alert("Hello  " + $("#cconstituency").val());
-    $.ajax({
-      url:
-        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/v001/setDefault",
-      contentType: "application/json",
-      type: "POST",
-      headers: {
-        "X-Access-Token": token
-      },
-      success: function() {
-        console.log("success");
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status + "  " + thrownError);
-      }
-    });
+    // $.ajax({
+    //   url:
+    //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
+    //   contentType: "application/json",
+    //   type: "POST",
+    //   headers: {
+    //     "X-Access-Token": token
+    //   },
+    //   success: function() {
+    //     console.log("success");
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError) {
+    //     console.log(xhr.status + "  " + thrownError);
+    //   }
+    // });
     var fil2 =
       '{"where": {"voterCardId":"' + $("#registrationNo").val() + '"}}';
     //'"
@@ -300,7 +302,7 @@ $(document).ready(function() {
         var i = 0;
         // window.location.href = "candidateSearch.html";
         document.getElementById("pageintro").innerHTML =
-          '<article><h3 class="heading">Registration Status</h3><table class="table table-striped"><thead><tr><th scope="col">Serial No</th><th scope="col">Name</th><th scope="col">Father/ Husband Name</th><th scope="col">Date of Birth</th><th scope="col">State</th><th scope="col">Constituency</th><th scope="col">Mobile No</th><th scope="col">Email Id</th><th scope="col">Eligibility</th><th scope="col">Status</th></tr></thead><tbody id="registrationStatus"></tbody></article>';
+          '<article><h3 class="heading">Registration Status</h3><table class="table table-striped"><thead><tr><th scope="col">Serial No</th><th scope="col">Name</th><th scope="col">Father/Husband Name</th><th scope="col">Date of Birth</th><th scope="col">State</th><th scope="col">Constituency</th><th scope="col">Mobile No</th><th scope="col">Email Id</th><th scope="col">Eligibility</th><th scope="col">Status</th></tr></thead><tbody id="registrationStatus"></tbody></article>';
         while (i < data.length) {
           stt =
             '<tr><th scope="row">' +

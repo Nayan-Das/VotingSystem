@@ -1,25 +1,25 @@
-var token = "Hpy08g0Yqx7GHkr8pUgfHOUSCgkUj3y16OVywVMwtZavTdn1uMcblhH5KO1yHwOV";
+var token = "IwfQT9NS7re56jNE9vzLrslzuFgsj7B4Q2547JE9iyb50T9gxlLCAIEB96FtB7fQ";
 var jsonstr;
 var hashstr;
 var st;
 // var s;
 function myFunction(s, hash) {
   console.log(s);
-  $.ajax({
-    url:
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/r003/setDefault",
-    contentType: "application/json",
-    type: "POST",
-    headers: {
-      "X-Access-Token": token
-    },
-    success: function() {
-      console.log("success");
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      console.log(xhr.status + "  " + thrownError);
-    }
-  });
+  // $.ajax({
+  //   url:
+  //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
+  //   contentType: "application/json",
+  //   type: "POST",
+  //   headers: {
+  //     "X-Access-Token": token
+  //   },
+  //   success: function() {
+  //     console.log("success");
+  //   },
+  //   error: function(xhr, ajaxOptions, thrownError) {
+  //     console.log(xhr.status + "  " + thrownError);
+  //   }
+  // });
   $.ajax({
     url:
       "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.createVoterCard",
@@ -32,10 +32,12 @@ function myFunction(s, hash) {
     data: s,
     success: function(data) {
       console.log(data);
-      alert("voter with id:" + hash+" is Registered ");
+      alert("Your voterID Id is:" + hash);
+      //setTimeout(location.reload(),10000);
     },
     error: function(error) {
       console.log(error.responseText);
+      // setTimeout(location.reload(),10000);
     }
   });
 }
@@ -44,7 +46,7 @@ $(document).ready(function() {
   $("#userRegistration").click(function() {
     // $("form").submit(function() {
 
-    // alert("Hello " + $("#name").val());
+    alert("Hello " + $("#name").val());
     // r = $(this).serializeArray();
 
     jsonstr =
@@ -110,21 +112,21 @@ function getHash(str, algo = "SHA-256") {
 $(document).ready(function() {
   $("#voterUpdate").click(function() {
     // alert("Hello  " + $("#cconstituency").val());
-    $.ajax({
-      url:
-        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/r003/setDefault",
-      contentType: "application/json",
-      type: "POST",
-      headers: {
-        "X-Access-Token": token
-      },
-      success: function() {
-        console.log("success");
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status + "  " + thrownError);
-      }
-    });
+    // $.ajax({
+    //   url:
+    //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
+    //   contentType: "application/json",
+    //   type: "POST",
+    //   headers: {
+    //     "X-Access-Token": token
+    //   },
+    //   success: function() {
+    //     console.log("success");
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError) {
+    //     console.log(xhr.status + "  " + thrownError);
+    //   }
+    // });
     var fil2 =
       '{"where": {"voterCardId":"' + $("#registrationNo").val() + '"}}';
     //'"
@@ -207,7 +209,7 @@ function fun() {
 
   $.ajax({
     url:
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/r003/setDefault",
+      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/admin/setDefault",
     contentType: "application/json",
     type: "POST",
     headers: {
@@ -215,7 +217,7 @@ function fun() {
     },
     success: function() {
       console.log(st);
-      // alert("success");
+      alert("success");
     },
     error: function(xhr, ajaxOptions, thrownError) {
       console.log(xhr.status + "  " + thrownError);
@@ -235,7 +237,7 @@ function fun() {
     data: st,
     success: function(data) {
       console.log(data);
-      alert("voter card is updated");
+      alert("Your voterID Id is updated");
       //setTimeout(location.reload(),10000);
     },
     error: function(error) {

@@ -1,25 +1,25 @@
-var token = "Hpy08g0Yqx7GHkr8pUgfHOUSCgkUj3y16OVywVMwtZavTdn1uMcblhH5KO1yHwOV";
+var token = "IwfQT9NS7re56jNE9vzLrslzuFgsj7B4Q2547JE9iyb50T9gxlLCAIEB96FtB7fQ";
 var jsonstr;
 var st;
 var hashstr;
 //////////////////////////register candidate/////////
 function myFunction(s, hash) {
   console.log(s);
-  $.ajax({
-    url:
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
-    contentType: "application/json",
-    type: "POST",
-    headers: {
-      "X-Access-Token": token
-    },
-    success: function() {
-      console.log("success");
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      console.log(xhr.status + "  " + thrownError);
-    }
-  });
+  // $.ajax({
+  //   url:
+  //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
+  //   contentType: "application/json",
+  //   type: "POST",
+  //   headers: {
+  //     "X-Access-Token": token
+  //   },
+  //   success: function() {
+  //     console.log("success");
+  //   },
+  //   error: function(xhr, ajaxOptions, thrownError) {
+  //     console.log(xhr.status + "  " + thrownError);
+  //   }
+  // });
 
   $.ajax({
     url:
@@ -33,7 +33,7 @@ function myFunction(s, hash) {
     data: s,
     success: function(data) {
       console.log(data);
-      alert(" candidate is registered with Id:" + hash);
+      alert("Your candiadteID Id is:" + hash);
       //setTimeout(location.reload(),10000);
     },
     error: function(error) {
@@ -47,7 +47,7 @@ $(document).ready(function() {
   $("#candidateSubmit").click(function() {
     // $("form").submit(function() {
 
-    // alert("Hello " + $("#name").val());
+    alert("Hello " + $("#name").val());
     // r = $(this).serializeArray();
 
     jsonstr =
@@ -109,21 +109,21 @@ function getHash(str, algo = "SHA-256") {
 $(document).ready(function() {
   $("#candidatesSearch").click(function() {
     // alert("Hello  " + $("#cconstituency").val());
-    $.ajax({
-      url:
-        "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
-      contentType: "application/json",
-      type: "POST",
-      headers: {
-        "X-Access-Token": token
-      },
-      success: function() {
-        console.log("success");
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status + "  " + thrownError);
-      }
-    });
+    // $.ajax({
+    //   url:
+    //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
+    //   contentType: "application/json",
+    //   type: "POST",
+    //   headers: {
+    //     "X-Access-Token": token
+    //   },
+    //   success: function() {
+    //     console.log("success");
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError) {
+    //     console.log(xhr.status + "  " + thrownError);
+    //   }
+    // });
     var fil =
       '{"where":{"and":[{"constituencyName":"' +
       $("#cconstituency").val() +
@@ -205,7 +205,7 @@ function myFunction3(id) {
     data: tmp,
     success: function(data) {
       console.log(data);
-      alert("candiadte with id:" + id+" is deleted");
+      alert("candiadteID Id is deleted:" + data);
       // var idd = ;
       // document.getElementById(idd)
       var element = document.getElementById(id);
@@ -216,27 +216,28 @@ function myFunction3(id) {
     error: function(error) {
       console.log(error.responseText);
       // console.log();
+      // setTimeout(location.reload(),10000);
     }
   });
 }
 ////////////////////////////////register party//////////////////////////
 function myFunction1(s) {
   console.log(s);
-  $.ajax({
-    url:
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
-    contentType: "application/json",
-    type: "POST",
-    headers: {
-      "X-Access-Token": token
-    },
-    success: function() {
-      console.log("success");
-    },
-    error: function(xhr, ajaxOptions, thrownError) {
-      console.log(xhr.status + "  " + thrownError);
-    }
-  });
+  // $.ajax({
+  //   url:
+  //     "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/e001/setDefault",
+  //   contentType: "application/json",
+  //   type: "POST",
+  //   headers: {
+  //     "X-Access-Token": token
+  //   },
+  //   success: function() {
+  //     console.log("success");
+  //   },
+  //   error: function(xhr, ajaxOptions, thrownError) {
+  //     console.log(xhr.status + "  " + thrownError);
+  //   }
+  // });
 
   $.ajax({
     url:
@@ -251,9 +252,11 @@ function myFunction1(s) {
     success: function(data) {
       console.log(data);
       alert("party is registered");
+      //setTimeout(location.reload(),10000);
     },
     error: function(error) {
       console.log(error.responseText);
+      // setTimeout(location.reload(),10000);
     }
   });
 }
@@ -261,7 +264,7 @@ $(document).ready(function() {
   $("#registerParty").click(function() {
     // $("form").submit(function() {
 
-    // alert("Hello " + $("#partyName").val());
+    alert("Hello " + $("#partyName").val());
     // r = $(this).serializeArray();
 
     jsonstr = $("#partyName").val() + $("#partySymbol").val();

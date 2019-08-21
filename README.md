@@ -1,7 +1,7 @@
 
    **ELECTRONIC VOTING SYSTEM** 
    **ON**
-  **AZURE** **HYPDERLEDGER**
+  **AZURE** **HYPERLEDGER**
 
     Team Name- Epsilon
     Nayan Das

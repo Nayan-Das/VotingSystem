@@ -1,30 +1,30 @@
-var token = "Hpy08g0Yqx7GHkr8pUgfHOUSCgkUj3y16OVywVMwtZavTdn1uMcblhH5KO1yHwOV";
+dXMF3mwgdOLeEA7tVBlOGwhFrl1v6n6yRjuLoZvzviGtsroU6MGfBQKtoAJyS8wxvar token = "IwfQT9NS7re56jNE9vzLrslzuFgsj7B4Q2547JE9iyb50T9gxlLCAIEB96FtB7fQ";
 $(document).ready(function() {
   $("#loadCandidate").click(function() {
     // alert("Hello  " + $("#cconstituency").val());
-    $.ajax({
-      url: "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/wallet/v001/setDefault",
-      contentType: "application/json",
-      type: "POST",
-      headers: {
-        "X-Access-Token": token
-      },
-      success: function() {
-        console.log("success");
-      },
-      error: function(xhr, ajaxOptions, thrownError) {
-        console.log(xhr.status + "  " + thrownError);
-      }
-    });
+    // $.ajax({
+    //   url: "http://172.27.22.166:3000/api/wallet/v001/setDefault",
+    //   contentType: "application/json",
+    //   type: "POST",
+    //   headers: {
+    //     "X-Access-Token": token
+    //   },
+    //   success: function() {
+    //     console.log("success");
+    //   },
+    //   error: function(xhr, ajaxOptions, thrownError) {
+    //     console.log(xhr.status + "  " + thrownError);
+    //   }
+    // });
     var fil =
-      '{"where":{"and":[{"constituencyName":"' +
+      '{"where":{"and":[{"constituencyId":"' +
       $("#cconstituency").val() +
       '"},{"candidateAddress":"' +
       $("#cstate").val() +
       '"}]}}';
     //'"
     var s =
-      "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.Candidate?filter=" + fil;
+      "http://172.27.22.166:3000/api/org.voting.system.Candidate?filter=" + fil;
 
     //  var uri = encodeURI(s);
     console.log(" uri " + s);
@@ -40,7 +40,6 @@ $(document).ready(function() {
       },
       success: function(data) {
         var i = 0;
-        // $("#candidateTable").empty();
         // window.location.href = "candidateSearch.html";
         while (i < data.length) {
           var val =
@@ -49,7 +48,7 @@ $(document).ready(function() {
             "#" +
             data[i].partyName +
             "#" +
-            data[i].constituencyName +
+            data[i].constituencyId +
             '"';
           stt =
             "<tr id=" +
@@ -92,7 +91,7 @@ function myFunction3(val) {
   var tmp =
     '{ "$class": "org.voting.system.castVote","ballot":  { "$class": "org.voting.system.Ballot","ballotId":"' +
     id +
-    '","constituencyName": "' +
+    '","constituencyId": "' +
     res[2] +
     '","candidateId":"' +
     res[0] +
@@ -103,7 +102,7 @@ function myFunction3(val) {
     '"}}';
   console.log(tmp);
   $.ajax({
-    url: "http://nayany2q6.eastus.cloudapp.azure.com:3000/api/org.voting.system.castVote",
+    url: "http://172.27.22.166:3000/api/org.voting.system.castVote",
     headers: {
       "Content-Type": "application/json",
       "X-Access-Token": token
