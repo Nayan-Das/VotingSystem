@@ -11,7 +11,13 @@
     COMPUTER SCIENCE & ENGINEERING 
     DEPARTMENT IIT KANPUR, KANPUR
  
-#   
+##   Links:
+# Hyperladger :http://nayany2q6.eastus.cloudapp.azure.com:8080/
+# REST server :http://nayany2q6.eastus.cloudapp.azure.com:3000/
+# WebSite pages:  1 http://nayany2q6.eastus.cloudapp.azure.com/index.html
+#                 2 http://nayany2q6.eastus.cloudapp.azure.com/registrationOfficer/index.html
+#                 3 http://nayany2q6.eastus.cloudapp.azure.com/electionOfficer/index.html
+#                 4 http://nayany2q6.eastus.cloudapp.azure.com/polling/poll.html
       
 
 ## INTRODUCTION
